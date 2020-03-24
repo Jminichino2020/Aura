@@ -1,9 +1,21 @@
 import pygame
 
 pygame.init()
-pygame.display.set_mode(640,480)
+screen=pygame.display.set_mode((800,600))
+done = False
+is_aquamarine = True
 
-screen=pygame.display.set_mode( (640,480))
-screen.fill(127,255,212)
-BLACK = (0,0,0)
-pygame.draw.rect(screen, BLACK, pygame.rect(320,240,100,100))
+while not done:
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      done = True
+    if event.type == pygame.KEYUP and event.key == pygame.K_SPACE:
+        is_aquamarine = not is_aquamarine
+
+  if is_aquamarine: color = (127,255,212) 
+  else: color = (153,0,0)
+  screen.fill((0,0,0))
+
+  pygame.draw.rect(screen, color, pygame.Rect(320,240,100,100))
+
+  pygame.display.flip()
