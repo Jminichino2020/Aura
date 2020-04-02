@@ -1,0 +1,33 @@
+import math
+
+import time
+
+"""Unit Converter"""
+
+print ("Welcome to John's Unit Converter")
+
+cat = print("What would you like to convert? We have length and width")
+
+if cat == ("l"):
+  unit_1 = int(input("Which unit would you like to convert to"))
+elif cat == ("2"):
+  unit_2 = int(input("Which unit would you like to convert to: "))
+else:
+  num1 = int(input("Enter your value: " ))
+
+    ##Calculations  
+
+if unit_1 == "cm" and unit_2 == "m":
+    ans = float(num1)/100       
+elif unit_1 == "mm" and unit_2 == "cm":
+    ans = float(num1)/10
+elif unit_1 == "m" and unit_2 == "cm":
+    ans = float(num1)*100
+elif unit_1 == "cm" and unit_2 == "mm":
+    ans = float(num1)*10
+elif unit_1 == "mm" and unit_2 == "m":
+    ans = float(num1)/1000
+elif unit_1 == "m" and unit_2 == "mm":
+    ans = float(num1)*1000  
+elif unit_1 == "km" and unit_2 == "m":
+    ans = float(num1)*1000
